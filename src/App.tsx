@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import './App.css'
-import { useIframeSdk } from '@whop/react'
+// import { useIframeSdk } from '@whop/react'
+import { createSdk } from "@whop/iframe";
+
+const sdk = createSdk({ appId: "app_pOKUFqujK19Y3I" });
 
 function App() {
-  const iframeSdk = useIframeSdk();
+  // const iframeSdk = useIframeSdk();
 
   const [loading, setLoading] = useState(true);
 
@@ -11,7 +14,7 @@ function App() {
     async function purchase() {
       setLoading(true);
       try {
-        const res = await iframeSdk.inAppPurchase({
+        const res = await sdk.inAppPurchase({
           id: "ch_XdCLdy0rBpuMDqL",
           planId: "plan_P3agDRh4HNFvd"
         })
