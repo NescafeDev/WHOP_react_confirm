@@ -35,9 +35,9 @@ function App() {
     <>
       {
         loading ? (
-          <div>Loading...</div>
+          <p>Loading...</p>
         ) : (
-          <div>Done</div>
+          <p>Done</p>
         )
       }
     </>
