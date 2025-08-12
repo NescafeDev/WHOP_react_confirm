@@ -6,7 +6,7 @@ import App from './App.tsx'
 import { WhopIframeSdkProvider } from "@whop/react";
 
 createRoot(document.getElementById('root')!).render(
-  <WhopIframeSdkProvider appId="app_pOKUFqujK19Y3I">
+  <WhopIframeSdkProvider>
     <StrictMode>
       <App />
     </StrictMode>
